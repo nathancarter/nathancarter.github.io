@@ -15,8 +15,12 @@ or on [my research profile on the Bentley website](https://faculty.bentley.edu/d
 
 Things to do on this website:
 
- 1. Find out if any links from the MoCG website go to my old site
  1. Publish the new model games project as its own GitHub project
  1. Link to that project from the project page
  1. Change my old website to a redirect link to this new one
+ 1. Update these MoCG links to go to my new site:
+     * Chapter 3 resources: [Affine Transformations in 2D]({{ site.baseurl }}/scene2d)
+     * Chapter 5 resources: [Matrix Multiplication Visualized]({{ site.baseurl }}/matrix-mult)
+     * Chapter 6 resources: [HTML-Ray]({{ site.baseurl }}/html-ray)
+     * Chapter 8 resources: [color picker]({{ site.baseurl }}/color-converter)
 
