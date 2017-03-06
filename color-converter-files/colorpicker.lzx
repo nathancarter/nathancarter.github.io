@@ -1,0 +1,219 @@
+<canvas>
+  <script><![CDATA[
+
+    function rgb2hsb ( R, G, B )
+    {
+      var result = new Array( 3 );
+
+      var Min = Math.min( R, G, B );
+      var Max = Math.max( R, G, B );
+      var del_Max = Max - Min;
+
+      result[2] = Max;
+
+      if ( del_Max == 0 ) { // gray
+        result[0] = 0;
+        result[1] = 0;
+      } else {
+        result[1] = del_Max / Max;
+        
+        var del_R = ( ( ( Max - R ) / 6 ) + ( del_Max / 2 ) ) / del_Max;
+        var del_G = ( ( ( Max - G ) / 6 ) + ( del_Max / 2 ) ) / del_Max;
+        var del_B = ( ( ( Max - B ) / 6 ) + ( del_Max / 2 ) ) / del_Max;
+        
+        if      ( R == Max ) result[0] = del_B - del_G;
+        else if ( G == Max ) result[0] = ( 1 / 3 ) + del_R - del_B;
+        else if ( B == Max ) result[0] = ( 2 / 3 ) + del_G - del_R;
+        
+        if ( result[0] < 0 ) result[0] += 1;
+        if ( result[0] > 1 ) result[0] -= 1;
+      }
+
+      return result;
+    }
+
+    function hsb2rgb ( H, S, B )
+    {
+      var result = new Array( 3 );
+        
+      if ( S == 0 ) {
+        result[0] = B;
+        result[1] = B;
+        result[2] = B;
+      } else {
+        var h = H * 6;
+        if ( h == 6 ) h = 0;
+        var i = Math.floor( h );
+        var v1 = B * ( 1 - S );
+        var v2 = B * ( 1 - S * ( h - i ) );
+        var v3 = B * ( 1 - S * ( 1 - ( h - i ) ) );
+
+        if ( i == 0 ) {
+          result[0] = B;   result[1] = v3;  result[2] = v1;
+        } else if ( i == 1 ) {
+          result[0] = v2;  result[1] = B;   result[2] = v1;
+        } else if ( i == 2 ) {
+          result[0] = v1;  result[1] = B;   result[2] = v3;
+        } else if ( i == 3 ) {
+          result[0] = v1;  result[1] = v2;  result[2] = B;
+        } else if ( i == 4 ) {
+          result[0] = v3;  result[1] = v1;  result[2] = B;
+        } else {
+          result[0] = B;   result[1] = v1;  result[2] = v2;
+        }
+      }
+
+      return result;
+    }
+
+    function byte2hex ( b )
+    {
+      return '0123456789ABCDEF'.charAt(Math.floor(b/16)) +
+             '0123456789ABCDEF'.charAt(b%16);
+    }
+
+    var movingWhich = 0;
+    function tryMove ( sliders )
+    {
+      if ( movingWhich ) return false;
+      movingWhich = sliders;
+      return true;
+    }
+    function doneMove ()
+    {
+      movingWhich = 0;
+    }
+
+    function updateRGBs ()
+    {
+      if ( !tryMove( hsbsliders ) ) return;
+      var tmp = hsb2rgb( hsbsliders.colorPercent( 0 ),
+                         hsbsliders.colorPercent( 1 ),
+                         hsbsliders.colorPercent( 2 ) );
+      rgbsliders.setColorPercent( tmp[0], tmp[1], tmp[2] );
+      doneMove();
+      sampleView.update();
+    }
+
+    function updateHSBs ()
+    {
+      if ( !tryMove( rgbsliders ) ) return;
+      var tmp = rgb2hsb( rgbsliders.colorPercent( 0 ),
+                         rgbsliders.colorPercent( 1 ),
+                         rgbsliders.colorPercent( 2 ) );
+      hsbsliders.setColorPercent( tmp[0], tmp[1], tmp[2] );
+      doneMove();
+      sampleView.update();
+    }
+
+  ]]></script>
+
+  <class name="gridlayout" extends="layout">
+    <!-- <attribute name="rows" value="0"/> Later we'll implement either way; now, cols-->
+    <attribute name="columns" value="3"/>
+    <attribute name="xspacing" value="0"/>
+    <attribute name="yspacing" value="0"/>
+    <attribute name="xinset" value="0"/>
+    <attribute name="yinset" value="0"/>
+    <method name="addSubview" args="s">
+      super.addSubview(s);
+      this.update();
+    </method>
+    <method name="update"><![CDATA[
+      if ( this.locked ) return;
+      this.locked = true;
+      var lasty = this.yinset;
+      var lastx = this.xinset;
+      var maxh = 0;
+      var widths = new Array( this.columns );
+      for ( var i = 0 ; i < this.columns ; i++ ) widths[i] = 0;
+      for ( var i = 0 ; i < subviews.length ; i++ )
+        if ( widths[i%this.columns] < subviews[i].getAttribute( 'width' ) )
+          widths[i%this.columns] = subviews[i].getAttribute( 'width' );
+      for ( var i = 0 ; i < subviews.length ; i++ ) {
+        if ( subviews[i].getAttribute( 'height' ) > maxh )
+          maxh = subviews[i].getAttribute( 'height' );
+        subviews[i].setAttribute( 'x', lastx );
+        subviews[i].setAttribute( 'y', lasty );
+        lastx += widths[i%this.columns] + this.xspacing;
+        if ( i % this.columns == this.columns - 1 ) {
+          lastx = 0;
+          lasty += maxh + this.yspacing;
+          maxh = 0;
+        }
+      }
+      this.locked = false;
+    ]]></method>
+  </class>
+
+  <class name="bytepercentslider">
+    <attribute name="sliderwidth" value="100"/>
+    <event name="valueChanged"/>
+    <simplelayout axis="x" spacing="5"/>
+    <slider name="slider" width="${parent.sliderwidth}"
+            minvalue="0" maxvalue="255" value="127"
+            onvalue="parent.valueChanged.sendEvent()"/>
+    <text name="percentlabel"
+          text="${Math.floor(100*parent.slider.value/parent.slider.maxvalue)+'%'}"/>
+  </class>
+
+  <class name="colorsliders" width="200">
+    <attribute name="s1name" type="html" value="Red"/>
+    <attribute name="s2name" type="html" value="Green"/>
+    <attribute name="s3name" type="html" value="Blue"/>
+    <event name="valuesChanged"/>
+    <gridlayout xspacing="5" yspacing="10" columns="2" yinset="20"/>
+    <text name="nametext1" text="${parent.s1name}"/>
+    <bytepercentslider name="slider1">
+      <handler name="valueChanged"> parent.valuesChanged.sendEvent() </handler>
+    </bytepercentslider>
+    <text name="nametext2" text="${parent.s2name}"/>
+    <bytepercentslider name="slider2">
+      <handler name="valueChanged"> parent.valuesChanged.sendEvent() </handler>
+    </bytepercentslider>
+    <text name="nametext3" text="${parent.s3name}"/>
+    <bytepercentslider name="slider3">
+      <handler name="valueChanged"> parent.valuesChanged.sendEvent() </handler>
+    </bytepercentslider>
+    <method name="color" args="index">
+      if ( index == 0 ) return this.slider1.slider.getAttribute( 'value' );
+      if ( index == 1 ) return this.slider2.slider.getAttribute( 'value' );
+      if ( index == 2 ) return this.slider3.slider.getAttribute( 'value' );
+      return -1;
+    </method>
+    <method name="colorPercent" args="index">
+      return this.color( index )/255.0;
+    </method>
+    <method name="setColor" args="r,g,b">
+      this.slider1.slider.setAttribute( 'value', r );
+      this.slider2.slider.setAttribute( 'value', g );
+      this.slider3.slider.setAttribute( 'value', b );
+    </method>
+    <method name="setColorPercent" args="r,g,b">
+      this.setColor( r*255, g*255, b*255 );
+    </method>
+  </class>
+
+  <simplelayout axis="x" spacing="15"/>
+  <colorsliders id="rgbsliders">
+    <handler name="valuesChanged"> updateHSBs() </handler>
+  </colorsliders>
+  <vbox id="sampleView">
+    <text align="center">Sample:</text>
+    <view name="showcolor" width="100" height="100"/>
+    <text name="showhex" align="center">(hex)</text>
+    <method name="update">
+      var r = rgbsliders.color( 0 );
+      var g = rgbsliders.color( 1 );
+      var b = rgbsliders.color( 2 );
+      var c = r*256*256 + g*256 + b;
+      var h = '#' + byte2hex( r ) + byte2hex( g ) + byte2hex( b );
+      showcolor.setAttribute( 'bgcolor', c );
+      showhex.setAttribute( 'text', h );
+    </method>
+  </vbox>
+  <colorsliders id="hsbsliders" s1name="Hue" s2name="Saturation" s3name="Brightness">
+    <handler name="valuesChanged"> updateRGBs() </handler>
+  </colorsliders>
+
+</canvas>
