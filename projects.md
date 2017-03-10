@@ -12,6 +12,9 @@ permalink: /projects/
  * [Lurch](www.lurchmath.org) - a general validation environment
    for mathematical reasoning in first proof courses (currently
    being updated for the web)
+ * [Model games](https://nathancarter.github.io/model-games/) -
+   a simple web app for the game-theoretic semantics of predicate
+   logic, which I use in my honors logic class
 
 # Textbooks
 
