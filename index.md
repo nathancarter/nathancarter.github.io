@@ -10,7 +10,8 @@ at [Indiana University](www.iub.edu), earning a Ph.D. in
 mathematical logic in 2004.
 
 I joined the faculty of [Bentley University](www.bentley.edu)
-and have worked in logic and dabbled in social network analysis.
+and have worked in logic, group theory visualization, computer
+graphics, educational software, and social network analysis.
 
 ## For more information
 
