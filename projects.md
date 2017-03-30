@@ -18,9 +18,14 @@ permalink: /projects/
 
 # Textbooks
 
- * [Visual Group Theory](http://www.maa.org/press/ebooks/visual-group-theory) (Mathematical Association of America, 2009)
- * [Introduction to the Mathematics of Computer Graphics](http://www.maa.org/press/ebooks/introduction-to-the-mathematics-of-computer-graphics) (Mathematical Association of America, 2015)
- * [forallx in Lurch]({{ site.baseurl }}/faxil) (free online, with P.D. Magnus)
+ * **Visual Group Theory**, Mathematical Association of America, 2009
+    * [textbook site](http://web.bentley.edu/empl/c/ncarter/vgt) (summary, errata, etc.)
+    * [publisher site](http://www.maa.org/press/ebooks/visual-group-theory) (to purchase the text)
+ * **Introduction to the Mathematics of Computer Graphics**, Mathematical Association of America, 2015
+    * [textbook site](http://mocg.wordpress.com) (many supplementary resources)
+    * [publisher site](http://www.maa.org/press/ebooks/introduction-to-the-mathematics-of-computer-graphics) (to purchase the text)
+ * **forallx in Lurch**, with coauthor P.D. Magnus
+    * [textbook site]({{ site.baseurl }}/faxil) (download text for free as a PDF)
 
 # Capstone supervision
 
