@@ -1,8 +1,13 @@
 
+/*
+ * Thanks to Larry Riddle for helpful improvements to this file,
+ * December 2017.
+ */
+
 var winsize = { w : 1000, h : 500 };
 
-var col1 = { x : 20, y : 20, w : 176, h : 40 };
-var col2 = { x : 216, y : 20, w : 264, h : 40 };
+var col1 = { x : 10, y : 20, w : 100, h : 40 };
+var col2 = { x : 120, y : 20, w : 360, h : 40 };
 var sm = col2.h/2;
 
 var addButton;
@@ -88,26 +93,27 @@ window.onload = function () {
             }
         });
         editor = Crafty.e("2D, DOM" )
-                       .attr({ x:-200, y:-200, w:col2.w, h:150, z:10 })
+                       .attr({ x:0, y:0, w:col2.w/2, h:150, z:10 })
                        .css({ "background-color" : "#DDF",
+                              "font-size": "14px",
                               "text-align" : "center",
                               border : "solid 1px #00F" });
         editor._element.innerHTML =
             "<input type='radio' name='tsr' value='T' id='editT'"
-          + "       onchange='updateFromEditor();'>T &nbsp; "
+          + "       onchange='updateFromEditor();'>T "
           + "<input type='radio' name='tsr' value='S' id='editS'"
-          + "       onchange='updateFromEditor();'>S &nbsp; "
+          + "       onchange='updateFromEditor();'>S "
           + "<input type='radio' name='tsr' value='R' id='editR'"
-          + "       onchange='updateFromEditor();'>R<br>"
+          + "       onchange='updateFromEditor();'>R <br>&nbsp;"
           + "<span id='xy'>"
-          + "x: <input type='text' name='x' id='editx'"
+          + "x: <input type='text' name='x' id='editx' size='10'"
           + "          onkeyup='updateFromEditor();'"
           + "          onchange='updateFromEditor();'><br>"
-          + "y: <input type='text' name='y' id='edity'"
+          + "y: <input type='text' name='y' id='edity' size='10'"
           + "          onkeyup='updateFromEditor();'"
           + "          onchange='updateFromEditor();'></span><br>"
           + "<span id='angle'>"
-          + "angle: <input type='text' name='t' id='editt'"
+          + "angle: <input type='text' name='t' id='editt' size='8'"
           + "              onkeyup='updateFromEditor();'"
           + "              onchange='updateFromEditor();'></span><br>"
           + "<input type='button' value='Delete'"
@@ -147,9 +153,9 @@ window.onload = function () {
                 transform.type = 'R';
             if ( document.getElementById( 'editS' ).checked )
                 transform.type = 'S';
-            transform.xfx = parseFloat( document.getElementById( 'editx' ).value );
-            transform.xfy = parseFloat( document.getElementById( 'edity' ).value );
-            transform.xft = parseFloat( document.getElementById( 'editt' ).value );
+            transform.xfx = Math.round( parseFloat( document.getElementById( 'editx' ).value ) * 100 ) / 100;
+            transform.xfy = Math.round( parseFloat( document.getElementById( 'edity' ).value ) * 100 ) / 100;
+            transform.xft = Math.round( parseFloat( document.getElementById( 'editt' ).value ) * 100 ) / 100;
             if ( transform.type == 'R' ) {
                 transform._element.innerHTML =
                     "<i>R</i><sub>"+transform.xft+"&deg;</sub>";
@@ -202,7 +208,7 @@ function addShape ()
                                  border : "solid 1px #0F0" })
                           .text( "+" )
                           .bind( "Click",
-                                 function ( e ) { addTransform( index ); });
+                                 function ( e ) { addTransform( row.shape.rowIndex ); });
     row.transforms = [];
     row.wrappers = [];
     addButton.y += col1.h;
@@ -226,6 +232,7 @@ function removeShape ( index )
         for ( var k = 0 ; k < rows[j].transforms.length ; k++ )
             rows[j].transforms[k].y -= col1.h;
         rows[j].select.id = "shapeSelect"+(j-1);
+        rows[j].shape.rowIndex = j-1;
     }
     addButton.y -= col1.h;
     rows = rows.slice( 0, index ).concat( rows.slice( index+1 ) );
@@ -274,7 +281,7 @@ function addTransform ( index )
     // it's not too wide, so add another
     var tidx = rows[index].transforms.length;
     var T = Crafty.e("2D, DOM, Mouse")
-                  .attr({ w:col2.h+5, h:col2.h,
+                  .attr({ w:col2.h+43, h:col2.h,
                           x:col2.x+col2.w-totlen-col2.h,
                           y:rows[index].element1.y })
                   .css({ "text-align": "center",
@@ -349,7 +356,7 @@ function editTransform ( transform )
         return;
     editingThis = transform;
     editor._edit_readFrom( editingThis );
-    editor.x = editingThis.x+editingThis.w;
+    editor.x = col2.x+col2.w; // editingThis.x+editingThis.w;
     editor.y = editingThis.y;
     if ( editor.y+editor.h > winsize.h )
         editor.y -= editor.y+editor.h - winsize.h;
