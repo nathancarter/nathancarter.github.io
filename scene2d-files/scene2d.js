@@ -57,6 +57,13 @@ window.onload = function () {
         });
     });
     Crafty.scene("main", function () {
+        //ensure we're centered within our parent
+        var element = document.getElementById( 'cr-stage' );
+        var desiredWidth = element.offsetWidth;
+        var actualWidth = element.parentNode.offsetWidth;
+        console.log( 'desired', desiredWidth, 'actual', actualWidth, 'adjust by', (actualWidth-desiredWidth)/2 );
+        element.style.marginLeft = ( ( actualWidth - desiredWidth ) / 2 ) + 'px';
+
         Crafty.background("#FFF");
         axes = Crafty.e("2D, DOM, Image").image( "../scene2d-files/img/axes.png" );
         axes.attr({ x:(3*winsize.w/2-axes.w)/2, y:(winsize.h-axes.h)/2, z:-1 });
