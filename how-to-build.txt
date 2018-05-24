@@ -1,0 +1,5 @@
+
+Build the site like so:
+
+$ bundle exec jekyll build
+

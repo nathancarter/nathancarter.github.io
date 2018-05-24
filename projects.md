@@ -22,7 +22,7 @@ permalink: /projects/
     * [textbook site](http://web.bentley.edu/empl/c/ncarter/vgt) (summary, errata, etc.)
     * [publisher site](http://www.maa.org/press/ebooks/visual-group-theory) (to purchase the text)
  * **Introduction to the Mathematics of Computer Graphics**, Mathematical Association of America, 2015
-    * [textbook site](http://mocg.wordpress.com) (many supplementary resources)
+    * [textbook site]({{ site.baseurl }}/mocg) (many supplementary resources)
     * [publisher site](http://www.maa.org/press/ebooks/introduction-to-the-mathematics-of-computer-graphics) (to purchase the text)
  * **forallx in Lurch**, with coauthor P.D. Magnus
     * [textbook site]({{ site.baseurl }}/faxil) (download text for free as a PDF)
