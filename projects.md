@@ -6,12 +6,11 @@ permalink: /projects/
 
 # Open Source Math Software
 
- * [Group Explorer](www.groupexplorer.com) - group theory
-   visualization (but getting a little long in the tooth now...
-   anyone interested in updating this in HTML5 for the web?)
- * [Lurch](www.lurchmath.org) - a general validation environment
-   for mathematical reasoning in first proof courses (currently
-   being updated for the web)
+ * [Group Explorer](http://nathancarter.github.io/group-explorer)
+   - group theory visualization software, now updated for the web
+ * [Lurch](http://www.lurchmath.org) - a general validation
+   environment for mathematical reasoning in first proof courses
+   (currently being updated for the web)
  * [Model games](https://nathancarter.github.io/model-games/) -
    a simple web app for the game-theoretic semantics of predicate
    logic, which I use in my honors logic class
