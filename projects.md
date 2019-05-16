@@ -8,7 +8,7 @@ permalink: /projects/
 
  * [Group Explorer](http://nathancarter.github.io/group-explorer) -
    group theory visualization software, now updated for the web
- * [Lurch](http://www.lurchmath.org) - a general validation
+ * [Lurch](http://lurchmath.org) - a general validation
    environment for mathematical reasoning in first proof courses
    (currently being updated for the web)
  * [Model games](https://nathancarter.github.io/model-games/) -
