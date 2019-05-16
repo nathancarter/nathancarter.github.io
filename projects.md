@@ -6,8 +6,8 @@ permalink: /projects/
 
 # Open Source Math Software
 
- * [Group Explorer](http://nathancarter.github.io/group-explorer)
-   - group theory visualization software, now updated for the web
+ * [Group Explorer](http://nathancarter.github.io/group-explorer) -
+   group theory visualization software, now updated for the web
  * [Lurch](http://www.lurchmath.org) - a general validation
    environment for mathematical reasoning in first proof courses
    (currently being updated for the web)
