@@ -14,6 +14,12 @@ permalink: /projects/
  * [Model games](https://nathancarter.github.io/model-games/) -
    a simple web app for the game-theoretic semantics of predicate
    logic, which I use in my honors logic class
+ * GAP Packages - while on sabbatical from July 2018 to July 2019 at the
+   University of St Andrews, I created the following packages for the algebraic
+   software [GAP](https://www.gap-system.org).
+    * [Accessing Group Explorer from GAP](https://nathancarter.github.io/gap-pkg-groupexplorer/)
+    * [Creating visualizations from GAP](https://nathancarter.github.io/jupyterviz/)
+    * [Visualizing semigroups in GAP](https://nathancarter.github.io/semigroupviz/)
 
 # Textbooks
 
@@ -32,4 +38,3 @@ During Spring 2010, I supervised Lubka Dagorova's honors
 capstone project. She created a Microsoft Excel Add-in for
 examining arbitrage opportunities in international stock
 exchanges. [See more here.]({{ site.baseurl }}/dagorova)
-
