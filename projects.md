@@ -4,6 +4,18 @@ layout: page
 permalink: /projects/
 ---
 
+# Books
+
+ * **Visual Group Theory**, Mathematical Association of America, 2009
+    * [textbook site](http://web.bentley.edu/empl/c/ncarter/vgt) (summary, errata, etc.)
+    * [publisher site](http://www.maa.org/press/ebooks/visual-group-theory) (to purchase the text)
+ * **Introduction to the Mathematics of Computer Graphics**, Mathematical Association of America, 2015
+    * [textbook site]({{ site.baseurl }}/mocg) (many supplementary resources)
+    * [publisher site](http://www.maa.org/press/ebooks/introduction-to-the-mathematics-of-computer-graphics) (to purchase the text)
+ * **Data Science for Mathematicians**, editor (with many wonderful authors who receive my hearty thanks!), to appear 2020, Taylor and Francis
+ * **forallx in Lurch**, with coauthor P.D. Magnus
+    * [textbook site]({{ site.baseurl }}/faxil) (download text for free as a PDF)
+
 # Open Source Math Software
 
  * [Group Explorer](http://nathancarter.github.io/group-explorer) -
@@ -20,18 +32,6 @@ permalink: /projects/
     * [Accessing Group Explorer from GAP](https://nathancarter.github.io/gap-pkg-groupexplorer/)
     * [Creating visualizations from GAP](https://nathancarter.github.io/jupyterviz/)
     * [Visualizing semigroups in GAP](https://nathancarter.github.io/semigroupviz/)
-
-# Textbooks
-
- * **Visual Group Theory**, Mathematical Association of America, 2009
-    * [textbook site](http://web.bentley.edu/empl/c/ncarter/vgt) (summary, errata, etc.)
-    * [publisher site](http://www.maa.org/press/ebooks/visual-group-theory) (to purchase the text)
- * **Introduction to the Mathematics of Computer Graphics**, Mathematical Association of America, 2015
-    * [textbook site]({{ site.baseurl }}/mocg) (many supplementary resources)
-    * [publisher site](http://www.maa.org/press/ebooks/introduction-to-the-mathematics-of-computer-graphics) (to purchase the text)
- * **Data Science for Mathematicians**, editor (with many wonderful authors who receive my hearty thanks!), to appear 2020, Taylor and Francis
- * **forallx in Lurch**, with coauthor P.D. Magnus
-    * [textbook site]({{ site.baseurl }}/faxil) (download text for free as a PDF)
 
 # Capstone supervision
 
