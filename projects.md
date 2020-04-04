@@ -29,6 +29,7 @@ permalink: /projects/
  * **Introduction to the Mathematics of Computer Graphics**, Mathematical Association of America, 2015
     * [textbook site]({{ site.baseurl }}/mocg) (many supplementary resources)
     * [publisher site](http://www.maa.org/press/ebooks/introduction-to-the-mathematics-of-computer-graphics) (to purchase the text)
+ * **Data Science for Mathematicians**, editor (with many wonderful authors who receive my hearty thanks!), to appear 2020, Taylor and Francis
  * **forallx in Lurch**, with coauthor P.D. Magnus
     * [textbook site]({{ site.baseurl }}/faxil) (download text for free as a PDF)
 
@@ -38,3 +39,4 @@ During Spring 2010, I supervised Lubka Dagorova's honors
 capstone project. She created a Microsoft Excel Add-in for
 examining arbitrage opportunities in international stock
 exchanges. [See more here.]({{ site.baseurl }}/dagorova)
+

@@ -11,7 +11,7 @@ mathematical logic in 2004.
 
 I joined the faculty of [Bentley University](www.bentley.edu)
 and have worked in logic, group theory visualization, computer
-graphics, educational software, and social network analysis.
+graphics, data science, educational software, and social network analysis.
 
 ## For more information
 
