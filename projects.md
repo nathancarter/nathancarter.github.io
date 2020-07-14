@@ -13,6 +13,9 @@ permalink: /projects/
     * [textbook site]({{ site.baseurl }}/mocg) (many supplementary resources)
     * [publisher site](http://www.maa.org/press/ebooks/introduction-to-the-mathematics-of-computer-graphics) (to purchase the text)
  * **Data Science for Mathematicians**, editor (with many wonderful authors who receive my hearty thanks!), to appear 2020, Taylor and Francis
+    * [publisher site](https://www.taylorfrancis.com/books/9780429398292)
+    * [supplementary materials website](https://ds4m.github.io)
+    * [pre-order on Amazon](https://www.amazon.com/Science-Mathematicians-Chapman-Handbooks-Mathematics/dp/0367027054/)
  * **forallx in Lurch**, with coauthor P.D. Magnus
     * [textbook site]({{ site.baseurl }}/faxil) (download text for free as a PDF)
 
