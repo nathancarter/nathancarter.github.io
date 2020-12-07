@@ -8,7 +8,7 @@ permalink: /projects/
 
  * **Visual Group Theory**, Mathematical Association of America, 2009
     * [textbook site](http://web.bentley.edu/empl/c/ncarter/vgt) (summary, errata, etc.)
-    * [publisher site](http://www.maa.org/press/ebooks/visual-group-theory) (to purchase the text)
+    * [publisher site](https://bookstore.ams.org/clrm-32/) (to purchase the text)
  * **Introduction to the Mathematics of Computer Graphics**, Mathematical Association of America, 2015
     * [textbook site]({{ site.baseurl }}/mocg) (many supplementary resources)
     * [publisher site](https://bookstore.ams.org/clrm-51) (to purchase the text)
