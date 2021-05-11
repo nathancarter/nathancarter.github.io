@@ -12,7 +12,7 @@ permalink: /projects/
  * **Introduction to the Mathematics of Computer Graphics**, Mathematical Association of America, 2015
     * [textbook site]({{ site.baseurl }}/mocg) (many supplementary resources)
     * [publisher site](https://bookstore.ams.org/clrm-51) (to purchase the text)
- * **Data Science for Mathematicians**, editor (with many wonderful authors who receive my hearty thanks!), to appear 2020, Taylor and Francis
+ * **Data Science for Mathematicians**, editor (with many wonderful authors who receive my hearty thanks!), Taylor and Francis, 2020
     * [publisher site](https://www.taylorfrancis.com/books/9780429398292)
     * [supplementary materials website](https://ds4m.github.io)
     * [pre-order on Amazon](https://www.amazon.com/Science-Mathematicians-Chapman-Handbooks-Mathematics/dp/0367027054/)
