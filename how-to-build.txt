@@ -3,3 +3,8 @@ Build the site like so:
 
 $ bundle exec jekyll build
 
+Or if you want to use the Jekyll Docker image:
+
+export JEKYLL_VERSION=3.8
+docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll:$JEKYLL_VERSION jekyll build
+
