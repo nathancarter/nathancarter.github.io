@@ -15,7 +15,7 @@ permalink: /projects/
  * **Data Science for Mathematicians**, editor (with many wonderful authors who receive my hearty thanks!), Taylor and Francis, 2020
     * [publisher site](https://www.taylorfrancis.com/books/9780429398292)
     * [supplementary materials website](https://ds4m.github.io)
-    * [pre-order on Amazon](https://www.amazon.com/Science-Mathematicians-Chapman-Handbooks-Mathematics/dp/0367027054/)
+    * [buy on Amazon](https://www.amazon.com/Science-Mathematicians-Chapman-Handbooks-Mathematics/dp/0367027054/)
  * **forallx in Lurch**, with coauthor P.D. Magnus
     * [textbook site]({{ site.baseurl }}/faxil) (download text for free as a PDF)
 
@@ -23,6 +23,8 @@ permalink: /projects/
 
  * [Group Explorer](http://nathancarter.github.io/group-explorer) -
    group theory visualization software, now updated for the web
+ * [How to Data](https://nathancarter.github.io/how2data/site/) -
+   a website of code recipes for math, stats, and data science
  * [Lurch](http://lurchmath.org) - a general validation
    environment for mathematical reasoning in first proof courses
    (currently being updated for the web)
