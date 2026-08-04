@@ -1,0 +1,35 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Nathan Carter"
+  navbar:
+    left:
+      - books.qmd
+      - software.qmd
+      - talks.qmd
+    right: 
+      - text: CV
+        href: files/vita.pdf
+      - icon: github
+        href: https://github.com/nathancarter
+        target: _blank
+      - icon: twitter-x 
+        href: https://x.com/nathancarter5 
+        target: _blank
+      - icon: linkedin
+        href: https://www.linkedin.com/in/nathan-carter-83115215/
+        target: _blank
+      - icon: tree
+        href: https://linktr.ee/nathancarter5
+        target: _blank
+  page-footer:
+    center: "Copyright 2026 Nathan Carter"
+
+format:
+  html:
+    theme:
+      - yeti
+    css: styles.css
+    # toc: true

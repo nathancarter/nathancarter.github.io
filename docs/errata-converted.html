@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>errata-converted – Nathan Carter</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-03ebed3cc6d9517934d904b30f9ec24d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Nathan Carter</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./books.html"> 
+<span class="menu-text">Books</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./software.html"> 
+<span class="menu-text">Software</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./talks.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./files/vita.pdf"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/nathancarter" target="_blank"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://x.com/nathancarter5" target="_blank"> <i class="bi bi-twitter-x" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/nathan-carter-83115215/" target="_blank"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://linktr.ee/nathancarter5" target="_blank"> <i class="bi bi-tree" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="chapter-3" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-3">Chapter 3</h3>
+<section id="page-26-after-definition-3.1" class="level4">
+<h4 class="anchored" data-anchor-id="page-26-after-definition-3.1">Page 26, after Definition 3.1</h4>
+<p>The fourth line of the second paragraph after Definition 3.1 says “Note that new each state…” when it should say “Note that each new state…”</p>
+</section>
+<section id="page-28-last-paragraph-sixth-line" class="level4">
+<h4 class="anchored" data-anchor-id="page-28-last-paragraph-sixth-line">Page 28, last paragraph, sixth line</h4>
+<p>The word admissible is misspelled as “admissable.”</p>
+</section>
+<section id="page-29-figure-3.5" class="level4">
+<h4 class="anchored" data-anchor-id="page-29-figure-3.5">Page 29, Figure 3.5</h4>
+<p>The figure has two identical shapes in it, when the one on the right should actually be flipped about a vertical axis. A corrected version of the figure is shown below.</p>
+<p><img src="images/boric-acid-flip.png" class="img-fluid"></p>
+</section>
+<section id="page-36-paragraph-1" class="level4">
+<h4 class="anchored" data-anchor-id="page-36-paragraph-1">Page 36, paragraph 1</h4>
+<p>Niels Abel’s first name is misspelled as Neils. The correct spelling is Niels.</p>
+</section>
+<section id="page-40-exercise-3.11" class="level4">
+<h4 class="anchored" data-anchor-id="page-40-exercise-3.11">Page 40, Exercise 3.11</h4>
+<p>Parts (d) and (f) have the same symmetry group, and thus not all six remaining frieze groups are represented by parts (a) through (f), as the introduction to the exercise suggests should be the case. Here is a new figure that is different from the six in the book.</p>
+<p><img src="images/leaf-frieze-correction.png" class="img-fluid"></p>
+</section>
+<section id="page-40-exercise-3.12" class="level4">
+<h4 class="anchored" data-anchor-id="page-40-exercise-3.12">Page 40, Exercise 3.12</h4>
+<p>Part (c) does not have the same symmetries as any of the figures in the previous exercise; it has the same symmetries as the frieze pattern from Section 3.1.3.</p>
+</section>
+</section>
+<section id="chapter-4" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-4">Chapter 4</h3>
+<section id="page-50-second-paragraph-of-section-4.4.2" class="level4">
+<h4 class="anchored" data-anchor-id="page-50-second-paragraph-of-section-4.4.2">Page 50, Second paragraph of Section 4.4.2</h4>
+<p>The Euler number’s value is approximately 2.71828, and was mistyped as 2.271828.</p>
+</section>
+<section id="page-52-exercise-4.3" class="level4">
+<h4 class="anchored" data-anchor-id="page-52-exercise-4.3">Page 52, Exercise 4.3</h4>
+<p>This exercise mentions “commutative” without defining it. It is defined a few pages later, in Exercise 4.23.</p>
+</section>
+<section id="page-53-exercise-4.4" class="level4">
+<h4 class="anchored" data-anchor-id="page-53-exercise-4.4">Page 53, Exercise 4.4</h4>
+<p>This is not the typical definition of the quaternions. I seem to have <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> mixed up. This doesn’t matter at all from a group theory standpoint, because the names are irrelevant; you could call them Ed, Cindy, and Joe, and it would be the same group. But for those who wish to examine the history and uses of the quaternions, my incorrect definition may be a stumbling block. Here is a corrected Cayley diagram for the quaternions, but were this to be adopted into the book, all mentions and uses of the group <span class="math inline">\(Q_4\)</span> throughout the book would need to be examined and updated to use this new structure. I have not done so in this errata.</p>
+<p><img src="images/Quaternions_correction.png" class="img-fluid"></p>
+</section>
+<section id="page-54-exercise-4.6b-line-1" class="level4">
+<h4 class="anchored" data-anchor-id="page-54-exercise-4.6b-line-1">Page 54, Exercise 4.6(b), line 1</h4>
+<p>It should read “on the right of Exercise 4.4,” rather than Exercise 4.5.</p>
+</section>
+<section id="page-54-exercise-4.6c-diagram" class="level4">
+<h4 class="anchored" data-anchor-id="page-54-exercise-4.6c-diagram">Page 54, Exercise 4.6(c), diagram</h4>
+<p>To stay consistent with other diagrams of the group <span class="math inline">\(A_4\)</span> and how its elements are shown in those diagrams, the blue and red colors in this diagram should be interchanged. (See, for example, the diagram for <span class="math inline">\(A_4\)</span> on page 136.)</p>
+</section>
+<section id="page-57-exercises-4.17-and-4.18" class="level4">
+<h4 class="anchored" data-anchor-id="page-57-exercises-4.17-and-4.18">Page 57, Exercises 4.17 and 4.18</h4>
+<p>These exercises should be in the other order, since 4.18 asks you why there is only one identity element in a group, and the answer to 4.17 requires you to use the fact that there is only one identity element in a group.</p>
+</section>
+<section id="page-60-exercise-4.26c-and-page-61-exercises-4.29-and-4.30" class="level4">
+<h4 class="anchored" data-anchor-id="page-60-exercise-4.26c-and-page-61-exercises-4.29-and-4.30">Page 60, Exercise 4.26(c) and Page 61, Exercises 4.29 and 4.30</h4>
+<p>The element naming convention does not match that of the Cayley diagram for <span class="math inline">\(A_4\)</span> on page 54. The elements <span class="math inline">\(a_1\)</span>, <span class="math inline">\(a_2\)</span>, <span class="math inline">\(b_1\)</span>, and <span class="math inline">\(b_2\)</span> should be <span class="math inline">\(a\)</span>, <span class="math inline">\(a^2\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(b^2\)</span> instead, respectively. It is probably easier to rename the elements in the figure than in the exercises, but either way will fix the problem. Here is an example for how you could correct Exercise 4.26.</p>
+<p><img src="images/Exercise_4_26_c_correction.png" class="img-fluid"></p>
+</section>
+<section id="page-61-exercise-4.28" class="level4">
+<h4 class="anchored" data-anchor-id="page-61-exercise-4.28">Page 61, Exercise 4.28</h4>
+<p>The exercise attempts to show a difference between abelian and nonabelian groups, but fails in the following way. In part (a), one can cancel <span class="math inline">\(a^2\)</span> and <span class="math inline">\((a^2)^{-1}\)</span> despite the <span class="math inline">\(x\)</span> between them because the group <span class="math inline">\(C_5\)</span> is abelian; this part of the exercise is correct. In part (b), the group is <span class="math inline">\(Q_4\)</span>, a nonabelian group, and in general it is not acceptable in nonabelian groups to rearrange elements to permit cancelling. However, in this case, the example chosen was a poor example, because the solution to part (b) is <span class="math inline">\(x = j\)</span>, which one could obtain by naively canceling the <span class="math inline">\(i\)</span> and <span class="math inline">\(i^{-1}\)</span>. Although this strategy does not work in every nonabelian example, it works in this one.</p>
+<p>A correct version of the exercise would use a different example for part (b), such as the equation <span class="math inline">\(a^2 x (a^2)^{-1} = d\)</span> in the group <span class="math inline">\(A_4\)</span> from page 54. The solution would be <span class="math inline">\(x = b\)</span>, which we would not get through naive cancelling. If we attempted to cancel the <span class="math inline">\(a^2\)</span> with <span class="math inline">\((a^2)^{-1}\)</span>, we would find <span class="math inline">\(x = d\)</span> instead, which is incorrect.</p>
+</section>
+</section>
+<section id="chapter-5" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-5">Chapter 5</h3>
+<section id="page-68-caption-to-figure-5.7" class="level4">
+<h4 class="anchored" data-anchor-id="page-68-caption-to-figure-5.7">Page 68, caption to Figure 5.7</h4>
+<p>The <span class="math inline">\(C_5\)</span> should be a <span class="math inline">\(C_7\)</span>.</p>
+</section>
+<section id="page-69-second-paragraph" class="level4">
+<h4 class="anchored" data-anchor-id="page-69-second-paragraph">Page 69, second paragraph</h4>
+<p>The paragraph mentions Exercise 4.6 as stating that Cayley diagram arrows represent multiplication on the right. Although arrows do indeed mean right multiplication, Exercise 4.6 does not actually say so. The first place such a statement seems to appear is in Section 4.2, but it is not explicit. Exercise 4.6 should probably be enhanced to say what this paragraph claims that it says.</p>
+</section>
+<section id="page-71-section-5.2.3-first-paragraph" class="level4">
+<h4 class="anchored" data-anchor-id="page-71-section-5.2.3-first-paragraph">Page 71, Section 5.2.3, first paragraph</h4>
+<p>This paragraph encourages you to examine Figure 5.13, which contains a new phenomenon that was not yet completely explained. The bottom cycle graph in Figure 5.13 does not show the cycle <span class="math inline">\(\{(e,e),(e,a^2)\}\)</span> directly. It only shows it as a subset of the cycle <span class="math inline">\(\{(e,e),(e,a),(e,a^2),(e,a^3)\}\)</span>. The text on page 71 should therefore clarify that cycles that are subsets of other cycles only show up as such, without the extra edges that the cycle graph would require to show that <span class="math inline">\(\{(e,e),(e,a^2)\}\)</span> is a cycle in its own right.</p>
+</section>
+<section id="page-71-last-lines" class="level4">
+<h4 class="anchored" data-anchor-id="page-71-last-lines">Page 71, last lines</h4>
+<p>The phrase “the right of Figure 5.9” should say “the left of Figure 5.9.”</p>
+</section>
+<section id="page-80-definition-of-a_n" class="level4">
+<h4 class="anchored" data-anchor-id="page-80-definition-of-a_n">Page 80, definition of <span class="math inline">\(A_n\)</span></h4>
+<p>I define <span class="math inline">\(A_n\)</span> as the set of squares of elements of <span class="math inline">\(S_n\)</span>, but this is erroneous! I had done this in an attempt to avoid the “standard” definition, because it requires defining parity of permutations first, which I wanted to avoid.</p>
+<p>For the purposes of Chapter 5, you can let the definition I give stand, because it is equivalent to the correct definition for <span class="math inline">\(n &lt; 6\)</span>, and I only discuss alternating groups smaller than or equal to <span class="math inline">\(A_5\)</span>. But my definition becomes incorrect at <span class="math inline">\(n = 6\)</span>.</p>
+<p>For the correct definition, I refer the reader to a reputable online source, <a href="http://mathworld.wolfram.com/AlternatingGroup.html">here</a>.</p>
+</section>
+<section id="page-81-caption-for-figure-5.26" class="level4">
+<h4 class="anchored" data-anchor-id="page-81-caption-for-figure-5.26">Page 81, caption for Figure 5.26</h4>
+<p>The word “comprised” should be “composed” instead.</p>
+</section>
+<section id="page-82-figure-5.27" class="level4">
+<h4 class="anchored" data-anchor-id="page-82-figure-5.27">Page 82, Figure 5.27</h4>
+<p>To stay consistent with other diagrams of the group <span class="math inline">\(A_4\)</span> and how its elements are shown in those diagrams, the blue and red colors in this diagram should be interchanged. (See, for example, the diagram for <span class="math inline">\(A_4\)</span> on page 136.)</p>
+</section>
+<section id="page-93-exercise-5.33e" class="level4">
+<h4 class="anchored" data-anchor-id="page-93-exercise-5.33e">Page 93, Exercise 5.33(e)</h4>
+<p>The presentation has an extra inverse at the end that should not be there. Instead, the exercise should read as follows:</p>
+<p>Sketch a Cayley diagram for the group <span class="math inline">\(\langle a, b \mid a^4 = 1,\ b^4 = 1,\ a^2 = b^2,\ bab = a \rangle\)</span>.</p>
+</section>
+<section id="page-94-exercise-5.38" class="level4">
+<h4 class="anchored" data-anchor-id="page-94-exercise-5.38">Page 94, Exercise 5.38</h4>
+<p>The term “order” is used in this exercise but not defined. Thus this exercise belongs later in the book, after that term has been defined. (You can find its definition on page 110, in Exercise 6.11.)</p>
+</section>
+<section id="page-95-exercise-5.41c" class="level4">
+<h4 class="anchored" data-anchor-id="page-95-exercise-5.41c">Page 95, Exercise 5.41(c)</h4>
+<p>The reference to Figure 2.10 should instead be a reference to Figure 4.7.</p>
+</section>
+<section id="page-96-exercise-5.44-first-line-of-paragraph-before-a" class="level4">
+<h4 class="anchored" data-anchor-id="page-96-exercise-5.44-first-line-of-paragraph-before-a">Page 96, Exercise 5.44, first line of paragraph before (a)</h4>
+<p>The <span class="math inline">\(C_5\)</span> should be an <span class="math inline">\(S_5\)</span>.</p>
+</section>
+</section>
+<section id="chapter-6" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-6">Chapter 6</h3>
+<section id="page-97-line-6" class="level4">
+<h4 class="anchored" data-anchor-id="page-97-line-6">Page 97, line 6</h4>
+<p>The word “moreso” should be two words, “more so.”</p>
+</section>
+<section id="page-111-exercise-6.18a" class="level4">
+<h4 class="anchored" data-anchor-id="page-111-exercise-6.18a">Page 111, Exercise 6.18(a)</h4>
+<p>Could be more clearly worded as follows:</p>
+<p>What is the one coset of <span class="math inline">\(\langle 2 \rangle\)</span> in <span class="math inline">\(\mathbf{Z}\)</span> (besides the subgroup <span class="math inline">\(\langle 2 \rangle\)</span> itself)?</p>
+</section>
+</section>
+<section id="chapter-7" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-7">Chapter 7</h3>
+<section id="page-118-definition-7.1" class="level4">
+<h4 class="anchored" data-anchor-id="page-118-definition-7.1">Page 118, Definition 7.1</h4>
+<p>This definition would be better with the factors swapped, so that it is consistent with Definition 8.9, of semidirect products. It would also therefore be clearer to use <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> in that latter definition, rather than <span class="math inline">\(G\)</span> and <span class="math inline">\(H\)</span>.</p>
+</section>
+<section id="page-122-second-line-from-the-bottom" class="level4">
+<h4 class="anchored" data-anchor-id="page-122-second-line-from-the-bottom">Page 122, second line from the bottom</h4>
+<p>The non-word “inthe” should be the two words “in the.”</p>
+</section>
+<section id="page-123-lines-3-and-4" class="level4">
+<h4 class="anchored" data-anchor-id="page-123-lines-3-and-4">Page 123, lines 3 and 4</h4>
+<p>The notation for <span class="math inline">\(S_3\)</span> is inconsistent with earlier uses of that group (e.g., Figure 5.17). Elements should be named <span class="math inline">\(e\)</span>, <span class="math inline">\(r\)</span>, <span class="math inline">\(r^2\)</span>, <span class="math inline">\(f\)</span>, <span class="math inline">\(fr\)</span>, <span class="math inline">\(fr^2\)</span>.</p>
+</section>
+<section id="page-125-figure-7.11" class="level4">
+<h4 class="anchored" data-anchor-id="page-125-figure-7.11">Page 125, Figure 7.11</h4>
+<p>The phrase “diagram from <span class="math inline">\(D_4\)</span>” should be “diagram of <span class="math inline">\(D_4\)</span>.”</p>
+</section>
+<section id="page-128-figure-7.14" class="level4">
+<h4 class="anchored" data-anchor-id="page-128-figure-7.14">Page 128, Figure 7.14</h4>
+<p>The caption mistakenly says that <span class="math inline">\(a\)</span> is the red generator and <span class="math inline">\(b\)</span> is the blue generator, but that is backwards. Actually, <span class="math inline">\(a\)</span> is blue and <span class="math inline">\(b\)</span> is red.</p>
+</section>
+<section id="page-133-figure-7.20" class="level4">
+<h4 class="anchored" data-anchor-id="page-133-figure-7.20">Page 133, Figure 7.20</h4>
+<p>The elements in the bottom row of each copy of <span class="math inline">\(C_6\)</span> are labeled incorrectly. Since the blue generator indicates the action of adding 3 mod 6, the figure should instead look like the one shown here.</p>
+<p>Also, in this figure, as in Figures 7.21, 7.23, and 7.26, the phrase “Left cosets of <span class="math inline">\(H\)</span> are near each other” is not really accurate. It should say “Elements in each left coset of <span class="math inline">\(H\)</span> are near each other.” (And although <span class="math inline">\(1H\)</span> is an accurate name for the coset, <span class="math inline">\(3H\)</span> would probably be clearer.)</p>
+<p><img src="images/Figure_7_20_correction.png" class="img-fluid"></p>
+</section>
+<section id="page-137-proof-of-theorem-7.6-sentence-3" class="level4">
+<h4 class="anchored" data-anchor-id="page-137-proof-of-theorem-7.6-sentence-3">Page 137, proof of Theorem 7.6, sentence 3</h4>
+<p>A useful clarification would be to add to the end of that sentence this parenthetical comment: (though probably involving fewer colors).</p>
+</section>
+<section id="page-138-figure-7.26" class="level4">
+<h4 class="anchored" data-anchor-id="page-138-figure-7.26">Page 138, Figure 7.26</h4>
+<p>To stay consistent with other diagrams of the group <span class="math inline">\(A_4\)</span> and how its elements are shown in those diagrams, the blue and red colors in this diagram should be interchanged. (See, for example, the diagram for <span class="math inline">\(A_4\)</span> on page 136.)</p>
+</section>
+<section id="page-140-third-line-of-second-to-last-paragraph" class="level4">
+<h4 class="anchored" data-anchor-id="page-140-third-line-of-second-to-last-paragraph">Page 140, third line of second-to-last paragraph</h4>
+<p>The notation <span class="math inline">\(N_{V_4}(A_4)\)</span> should instead be <span class="math inline">\(N_{A_4}(V_4)\)</span>.</p>
+</section>
+<section id="page-144-third-sentence-of-last-paragraph" class="level4">
+<h4 class="anchored" data-anchor-id="page-144-third-sentence-of-last-paragraph">Page 144, third sentence of last paragraph</h4>
+<p>It reads, “As before, I use the names <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span>, and <span class="math inline">\(d\)</span> in <span class="math inline">\(A_4\)</span> to represent the four 120-degree clockwise rotations…” which is misleading. I had not given any interpretation to those symbols before page 144. I had used them to <em>label</em> nodes in Figure 7.23 on page 136, but did not give them any <em>interpretation</em> until page 144.</p>
+</section>
+<section id="page-150-exercise-7.18f" class="level4">
+<h4 class="anchored" data-anchor-id="page-150-exercise-7.18f">Page 150, Exercise 7.18(f)</h4>
+<p>The image has some problems with depth; all the nodes are rendered on top of the lines. It should look like this instead.</p>
+<p><img src="images/Exercise_7_18_f_correction.png" class="img-fluid"></p>
+</section>
+<section id="page-155-exercise-7.37" class="level4">
+<h4 class="anchored" data-anchor-id="page-155-exercise-7.37">Page 155, Exercise 7.37</h4>
+<p>It should say that Figure 7.33 shows that <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are conjugates, not <span class="math inline">\(a\)</span> and <span class="math inline">\(c\)</span>.</p>
+</section>
+</section>
+<section id="chapter-8" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-8">Chapter 8</h3>
+<section id="page-163-figure-8.8" class="level4">
+<h4 class="anchored" data-anchor-id="page-163-figure-8.8">Page 163, Figure 8.8</h4>
+<p>Two elements in the group of complex numbers are missing their negative signs. The figure should instead look like the one shown here.</p>
+<p><img src="images/Figure_8_8_correction.png" class="img-fluid"></p>
+</section>
+<section id="page-166-paragraphs-2-4" class="level4">
+<h4 class="anchored" data-anchor-id="page-166-paragraphs-2-4">Page 166, paragraphs 2-4</h4>
+<p>I argue that the <span class="math inline">\(C\)</span> is closed, but not that it contains the inverse of each element. Such an argument is sufficient for finite groups, but not for arbitrary groups. A proof that <span class="math inline">\(C\)</span> contains its elements’ inverses would go like this:</p>
+<p>First observe that any homomorphism must map the identity element of the domain to the identity element of the codomain. Take the equation <span class="math inline">\(a \cdot e = a\)</span> in the domain; through the homomorphism it becomes <span class="math inline">\(\phi(a) \cdot \phi(e) = \phi(a)\)</span>. This equation tells us that the path <span class="math inline">\(\phi(e)\)</span> leads from <span class="math inline">\(\phi(a)\)</span> right back to <span class="math inline">\(\phi(a)\)</span> again. Thus it must either be the empty path or a loop that’s equivalent to it, meaning that it’s the identity element in the codomain.</p>
+<p>Now back to proving that <span class="math inline">\(C\)</span> contains the inverse of each of its elements. Assume <span class="math inline">\(a\)</span> is in <span class="math inline">\(C\)</span>. That means that the equation <span class="math inline">\(a \cdot a^{-1} = e\)</span> in the domain becomes the equation <span class="math inline">\(\phi(a) \cdot \phi(a^{-1}) = e\)</span> in the codomain (using the fact that <span class="math inline">\(\phi(e) = e\)</span> that we just proved). In other words, following the <span class="math inline">\(\phi(a)\)</span> path and then the <span class="math inline">\(\phi(a^{-1})\)</span> path returns you back to where you started. Thus the image of <span class="math inline">\(a^{-1}\)</span> is just the reverse path of the image of <span class="math inline">\(a\)</span>, and so if one is in <span class="math inline">\(C\)</span> then so is the other.</p>
+</section>
+<section id="pages-173-174-figures-8.19-and-8.20" class="level4">
+<h4 class="anchored" data-anchor-id="pages-173-174-figures-8.19-and-8.20">Pages 173-174, Figures 8.19 and 8.20</h4>
+<p>The order of <span class="math inline">\(\times\)</span> is reversed here from what it had been in Chapter 7. Where it says <span class="math inline">\(C_3 \times C_4\)</span>, it should instead say <span class="math inline">\(C_4 \times C_3\)</span>. Similarly, <span class="math inline">\(C_n \times C_m\)</span> should say <span class="math inline">\(C_m \times C_n\)</span>. Similar changes in the text surrounding the figures may also be required.</p>
+</section>
+<section id="page-175-second-paragraph-of-section-8.5" class="level4">
+<h4 class="anchored" data-anchor-id="page-175-second-paragraph-of-section-8.5">Page 175, second paragraph of Section 8.5</h4>
+<p>Where it says “the leftmost pattern in Figure 5.8” it should instead say “the right of the two patterns in Figure 5.8.”</p>
+</section>
+<section id="page-177-first-paragraph" class="level4">
+<h4 class="anchored" data-anchor-id="page-177-first-paragraph">Page 177, first paragraph</h4>
+<p>Twice I mention Long Island, when instead it should say Manhattan.</p>
+</section>
+<section id="page-182-exercise-8.13" class="level4">
+<h4 class="anchored" data-anchor-id="page-182-exercise-8.13">Page 182, Exercise 8.13</h4>
+<p>This exercise should be stated for abelian groups only. The function defined there is not a homomorphism for all groups, but is a homomorphism for all abelian groups.</p>
+</section>
+<section id="page-183-exercise-8.15" class="level4">
+<h4 class="anchored" data-anchor-id="page-183-exercise-8.15">Page 183, Exercise 8.15</h4>
+<p>The text after the exercise suggests that the identity element is not a commutator. I would rewrite sentence 2 of that paragraph as follows: Elements of that form are called <em>commutators.</em></p>
+</section>
+<section id="page-184-exercise-8.24" class="level4">
+<h4 class="anchored" data-anchor-id="page-184-exercise-8.24">Page 184, Exercise 8.24</h4>
+<p>The equation should read <span class="math inline">\(an = bm + 1\)</span>.</p>
+</section>
+<section id="pages-185-186-exercises-8.29-and-8.30" class="level4">
+<h4 class="anchored" data-anchor-id="pages-185-186-exercises-8.29-and-8.30">Pages 185-186, Exercises 8.29 and 8.30</h4>
+<p>Throughout these exercises, the semidirect products are written in the wrong order. For instance, in 8.29 part (a), because <span class="math inline">\(\theta : C_2 \to \mathrm{Aut}(C_5)\)</span>, it should ask about the semidirect product of <span class="math inline">\(C_5\)</span> with <span class="math inline">\(C_2\)</span>, not the other way around. The same error is repeated in parts (c) and (d); in each case, the homomorphisms are correct and the product notation is backwards. In 8.30 it should speak of the product of <span class="math inline">\(C_3\)</span> with <span class="math inline">\(C_4\)</span>.</p>
+</section>
+<section id="page-187-exercise-8.40" class="level4">
+<h4 class="anchored" data-anchor-id="page-187-exercise-8.40">Page 187, Exercise 8.40</h4>
+<p>It should ask you to find an isomorphism between <span class="math inline">\(\mathbf{Q}^+ \times C_2\)</span> and <span class="math inline">\(\mathbf{Q}^*\)</span>, not between <span class="math inline">\(\mathbf{Q} \times C_2\)</span> and <span class="math inline">\(\mathbf{Q}^*\)</span>.</p>
+</section>
+<section id="page-189-exercise-8.43" class="level4">
+<h4 class="anchored" data-anchor-id="page-189-exercise-8.43">Page 189, Exercise 8.43</h4>
+<p>The second paragraph contains the sentence beginning “Consider the homomorphism <span class="math inline">\(\theta : H \times K \to G\)</span>.” It should be changed to begin with “Consider the function <span class="math inline">\(\theta : H \times K \to HK\)</span>.” This is for two reasons. First, it is not always a homomorphism unless we have the assumption given in part (a). Second, it is not an isomorphism onto all of <span class="math inline">\(G\)</span>, but only onto its image, <span class="math inline">\(HK\)</span>.</p>
+</section>
+</section>
+<section id="chapter-9" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-9">Chapter 9</h3>
+<section id="pages-198-199-proof-of-theorem-9.4" class="level4">
+<h4 class="anchored" data-anchor-id="pages-198-199-proof-of-theorem-9.4">Pages 198-199, proof of Theorem 9.4</h4>
+<p>This proof is done by counting the number of left cosets of <span class="math inline">\(\mathrm{Stab}(s)\)</span> in <span class="math inline">\(G\)</span>, but it should instead be done by counting the number of right cosets of that same subgroup. Although of course the number of cosets is the same either way, the way currently used in the book requires treating the sequence of actions <span class="math inline">\(\phi(g)\phi(h)\)</span> as if the one on the right applies first. This convention is common in mathematics, but is not the convention used in the rest of the textbook! Thus to stay consistent, I should use right cosets and swap all the left and rights in the proof of the theorem.</p>
+</section>
+<section id="page-199-first-displayed-equation" class="level4">
+<h4 class="anchored" data-anchor-id="page-199-first-displayed-equation">Page 199, first displayed equation</h4>
+<p>The first <span class="math inline">\(\mathrm{Stab}(S)\)</span> should be <span class="math inline">\(\mathrm{Stab}(s)\)</span>.</p>
+</section>
+<section id="page-206-proof-of-theorem-9.9" class="level4">
+<h4 class="anchored" data-anchor-id="page-206-proof-of-theorem-9.9">Page 206, Proof of Theorem 9.9</h4>
+<p>The first sentence says <span class="math inline">\(\phi : G \to \mathrm{Perm}(S)\)</span>, but it is <span class="math inline">\(H\)</span> that is acting on <span class="math inline">\(S\)</span>, so it should instead read <span class="math inline">\(\phi : H \to \mathrm{Perm}(S)\)</span>.</p>
+</section>
+<section id="page-211-first-paragraph" class="level4">
+<h4 class="anchored" data-anchor-id="page-211-first-paragraph">Page 211, first paragraph</h4>
+<p>The final sentence of the paragraph references Figure 9.6, when it should reference Figure 9.13.</p>
+</section>
+<section id="page-215-proof-of-theorem-9.12" class="level4">
+<h4 class="anchored" data-anchor-id="page-215-proof-of-theorem-9.12">Page 215, Proof of Theorem 9.12</h4>
+<p>The final paragraph could be clarified by changing the phrase “and thus it is not zero” to “and thus it is not zero mod <span class="math inline">\(p\)</span>.”</p>
+</section>
+<section id="page-219-exercise-9.16" class="level4">
+<h4 class="anchored" data-anchor-id="page-219-exercise-9.16">Page 219, Exercise 9.16</h4>
+<p>Although the word <span class="math inline">\(\mathrm{Ker}\)</span> in this exercise has extra spaces in it, it has the same meaning as elsewhere in the text, where it is typeset correctly. See also the erratum on page 292.</p>
+</section>
+<section id="page-220-exercise-9.27" class="level4">
+<h4 class="anchored" data-anchor-id="page-220-exercise-9.27">Page 220, Exercise 9.27</h4>
+<p>No reason is given for why <span class="math inline">\(ba\)</span> must be some <span class="math inline">\(a^m b\)</span>. Why could it not be <span class="math inline">\(a^m b^2\)</span>? You can prove that this cannot be the case in a number of different ways. Consider, for example, showing that <span class="math inline">\(\langle a \rangle\)</span> is a normal subgroup.</p>
+</section>
+</section>
+<section id="chapter-10" class="level3">
+<h3 class="anchored" data-anchor-id="chapter-10">Chapter 10</h3>
+<section id="page-241-figure-10.13" class="level4">
+<h4 class="anchored" data-anchor-id="page-241-figure-10.13">Page 241, Figure 10.13</h4>
+<p>The figure uses red and blue backwards. In order to be consistent with Figure 10.12, the red should be blue and vice versa. Here is a corrected version.</p>
+<p><img src="images/Figure_10_13_correction.png" class="img-fluid"></p>
+</section>
+<section id="page-242-line-6" class="level4">
+<h4 class="anchored" data-anchor-id="page-242-line-6">Page 242, line 6</h4>
+<p>The phrase “neither <span class="math inline">\(r_1\)</span> nor <span class="math inline">\(r_2\)</span>” should be “neither <span class="math inline">\(r_2\)</span> nor <span class="math inline">\(r_3\)</span>.”</p>
+</section>
+<section id="page-246-figure-10.20" class="level4">
+<h4 class="anchored" data-anchor-id="page-246-figure-10.20">Page 246, Figure 10.20</h4>
+<p>The subgroups in the figure marked as <span class="math inline">\(V_4\)</span> should be marked as <span class="math inline">\(C_4\)</span> instead. Furthermore, the equality signs in the figure are incorrect; the groups are isomorphic, not equal. (The congruence sign should be used instead.)</p>
+</section>
+<section id="page-249-paragraph-above-10.7.2" class="level4">
+<h4 class="anchored" data-anchor-id="page-249-paragraph-above-10.7.2">Page 249, paragraph above 10.7.2</h4>
+<p>The following sentence is inaccurate.</p>
+<blockquote class="blockquote">
+<p>Furthermore, no group containing <span class="math inline">\(A_5\)</span> can be solvable, because the smallest first step in any chain of normal subgroups in such a group would be the invalid step <span class="math inline">\(\{e\} \vartriangleleft A_5\)</span>.</p>
+</blockquote>
+<p>It should be rewritten along the following lines.</p>
+<blockquote class="blockquote">
+<p>Furthermore, no group containing <span class="math inline">\(A_5\)</span> can be solvable. No step <span class="math inline">\(A \vartriangleleft B\)</span> in such a chain can have the quotient <span class="math inline">\(B/A\)</span> isomorphic to <span class="math inline">\(A_5\)</span>, because it is not abelian. And yet it can also be shown that a step in the chain including just “part” of <span class="math inline">\(A_5\)</span> could be used to reveal a normal subgroup in <span class="math inline">\(A_5\)</span>, an impossibility.</p>
+</blockquote>
+</section>
+<section id="page-253-exercise-10.4" class="level4">
+<h4 class="anchored" data-anchor-id="page-253-exercise-10.4">Page 253, Exercise 10.4</h4>
+<p>In part (a), step 2 actually yields <span class="math inline">\(\dfrac{-x^2 - x - 2}{x^2 + 1}\)</span>.</p>
+</section>
+<section id="pages-253-254-exercise-10.6" class="level4">
+<h4 class="anchored" data-anchor-id="pages-253-254-exercise-10.6">Pages 253-254, Exercise 10.6</h4>
+<p>Every occurrence of <span class="math inline">\(24x\)</span> in the example polynomial division should actually be <span class="math inline">\(26x\)</span>.</p>
+</section>
+<section id="page-255-exercise-10.9" class="level4">
+<h4 class="anchored" data-anchor-id="page-255-exercise-10.9">Page 255, Exercise 10.9</h4>
+<p>In part (e), you may also assume that <span class="math inline">\(\sqrt{6}\)</span> is irrational.</p>
+</section>
+<section id="page-258-exercise-10.22" class="level4">
+<h4 class="anchored" data-anchor-id="page-258-exercise-10.22">Page 258, Exercise 10.22</h4>
+<p>See the erratum for the solution to part (c), below. The same problem does not appear in any of the other three parts of this exercise, because in each case, arguments that are not too difficult can be made for the irreducibility of the resulting polynomial.</p>
+</section>
+<section id="pages-259-260-exercise-10.29" class="level4">
+<h4 class="anchored" data-anchor-id="pages-259-260-exercise-10.29">Pages 259-260, Exercise 10.29</h4>
+<p>The exercise claims to show the diagrams of finite fields of orders 5 and 8, but from the diagrams it is clear that this is a typo; they show the finite fields of orders 4 and 8. Thus when part (b) of the problem asks you to create the diagram for the finite field of order 4, this does not make sense since you were already given it. Consider instead creating the diagram for the finite field of order 5.</p>
+</section>
+</section>
+<section id="appendix" class="level3">
+<h3 class="anchored" data-anchor-id="appendix">Appendix</h3>
+<section id="page-263-answer-to-exercise-2.15" class="level4">
+<h4 class="anchored" data-anchor-id="page-263-answer-to-exercise-2.15">Page 263, Answer to Exercise 2.15</h4>
+<p>The diagram shown in the text as a solution to this exercise violates not only Rule 1.6, as assigned, but also Rule 1.8, as described in the solution to exercise 2.17. However, the assignment was to violate only Rule 1.6, not any of the others. A diagram like the following would be better, in which we find that from the point B, it is not clear what the inverse of the red arrow would mean.</p>
+<p><img src="images/erratum-exercise-2-15-solution.png" class="img-fluid"></p>
+</section>
+<section id="page-264-figure-a.2" class="level4">
+<h4 class="anchored" data-anchor-id="page-264-figure-a.2">Page 264, Figure A.2</h4>
+<p>The figure was incorrect in two ways; the right-hand friezes in the top square were incorrectly labeled, and the arced arrows along the right side were backwards. A corrected version appears here.</p>
+<p><img src="images/Figure_A_2_correction.png" class="img-fluid"></p>
+</section>
+<section id="page-270-answer-to-exercise-7.9" class="level4">
+<h4 class="anchored" data-anchor-id="page-270-answer-to-exercise-7.9">Page 270, Answer to Exercise 7.9</h4>
+<p>Answer to Exercise 6.26 (b). The 8 should be a 6.</p>
+</section>
+<section id="page-270-answer-to-exercise-7.9-1" class="level4">
+<h4 class="anchored" data-anchor-id="page-270-answer-to-exercise-7.9-1">Page 270, Answer to Exercise 7.9</h4>
+<p>This is mislabeled. It is actually the answer (well, actually, the hint) for Exercise 7.10.</p>
+</section>
+<section id="page-272-answer-to-exercise-7.33b" class="level4">
+<h4 class="anchored" data-anchor-id="page-272-answer-to-exercise-7.33b">Page 272, Answer to Exercise 7.33(b)</h4>
+<p>The phrase “for the first two odd <span class="math inline">\(D_n\)</span>” should instead be “for <span class="math inline">\(D_n\)</span> for the first two even <span class="math inline">\(n\)</span>.”</p>
+</section>
+<section id="page-273-answer-to-exercise-8.4c" class="level4">
+<h4 class="anchored" data-anchor-id="page-273-answer-to-exercise-8.4c">Page 273, Answer to Exercise 8.4(c)</h4>
+<p>The map <span class="math inline">\(\theta_3\)</span> should be <span class="math inline">\(\theta_3(x) = 4 - x \pmod{4}\)</span>.</p>
+</section>
+<section id="page-273-answer-to-exercise-8.6" class="level4">
+<h4 class="anchored" data-anchor-id="page-273-answer-to-exercise-8.6">Page 273, Answer to Exercise 8.6</h4>
+<p>Part (b) is ambiguous. It asks if the set of elements to which <span class="math inline">\(\phi\)</span> maps <span class="math inline">\(K\)</span> will be normal, but it does not say normal in what group. It will always be normal in <span class="math inline">\(\mathrm{Im}(\phi)\)</span>, but not always normal in <span class="math inline">\(H\)</span>.</p>
+</section>
+<section id="page-274-answer-to-exercise-8.16" class="level4">
+<h4 class="anchored" data-anchor-id="page-274-answer-to-exercise-8.16">Page 274, Answer to Exercise 8.16</h4>
+<p>The hint assumes that an arbitrary element of <span class="math inline">\(H\)</span> is a commutator, which is not guaranteed by the definition of that subgroup. The commutator subgroup was defined as being generated by commutators, not equal to the set of commutators. Thus we must assume that the arbitrary element of <span class="math inline">\(H\)</span> is a product of commutators, and thus looks like the much less pleasant expression <span class="math inline">\(g\, a_1 b_1 a_1^{-1} b_1^{-1} \cdots a_n b_n a_n^{-1} b_n^{-1}\, g^{-1}\)</span>. And you should be able to multiply this by some commutators to yield an element of <span class="math inline">\(H\)</span>, that is, a product of commutators.</p>
+</section>
+<section id="page-275-answer-to-exercise-8.29" class="level4">
+<h4 class="anchored" data-anchor-id="page-275-answer-to-exercise-8.29">Page 275, Answer to Exercise 8.29</h4>
+<p>The <span class="math inline">\(Z_n\)</span> should be <span class="math inline">\(C_n\)</span> instead.</p>
+</section>
+<section id="page-278-answer-to-exercise-9.12" class="level4">
+<h4 class="anchored" data-anchor-id="page-278-answer-to-exercise-9.12">Page 278, Answer to Exercise 9.12</h4>
+<p>It should instead state that Exercise 6.31 guides you through creating the counterexample that Exercise 9.12 requests.</p>
+</section>
+<section id="page-279-answers-to-exercises-9.22c-and-9.27" class="level4">
+<h4 class="anchored" data-anchor-id="page-279-answers-to-exercises-9.22c-and-9.27">Page 279, Answers to Exercises 9.22(c) and 9.27</h4>
+<p>The same correction regarding the order of factors in the semidirect product applies here as it did in earlier exercises. The product of <span class="math inline">\(C_4\)</span> with <span class="math inline">\(C_3\)</span> should be <span class="math inline">\(C_3\)</span> with <span class="math inline">\(C_4\)</span> instead, and the product of <span class="math inline">\(C_3\)</span> with <span class="math inline">\(C_7\)</span> should be <span class="math inline">\(C_7\)</span> with <span class="math inline">\(C_3\)</span> instead.</p>
+</section>
+<section id="page-282-answer-to-exercise-10.22b" class="level4">
+<h4 class="anchored" data-anchor-id="page-282-answer-to-exercise-10.22b">Page 282, Answer to Exercise 10.22(b)</h4>
+<p>The polynomial I create may be irreducible, but it is not obvious whether it is or not. I should have designed the exercise better; consider instead changing the 1 to a 2, so that <span class="math inline">\(r\)</span> is the fifth root of <span class="math inline">\(2 + \sqrt{2}\)</span>. Then the polynomial created is <span class="math inline">\(r^{10} - 4r^5 + 2\)</span>, which is irreducible by the Eisenstein Criterion (Theorem 10.4).</p>
+</section>
+</section>
+<section id="index" class="level3">
+<h3 class="anchored" data-anchor-id="index">Index</h3>
+<section id="page-292-homomorphism-kernel" class="level4">
+<h4 class="anchored" data-anchor-id="page-292-homomorphism-kernel">Page 292, homomorphism kernel</h4>
+<p>Appears redundantly, due to typesetting error on page 219.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Copyright 2026 Nathan Carter</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

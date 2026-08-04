@@ -1,0 +1,34 @@
+---
+# title: "Nathan Carter"
+toc: false
+---
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+![](images/head-shot-2023-square.jpg){fig-align="center" width="75%"}
+
+Professor, Mathematical Sciences Department, Bentley University
+
+Office: Morison 375
+
+On sabbatical for academic year 2026-2027
+
+:::
+
+::: {.column width="10%"}
+<!-- gap -->
+:::
+
+::: {.column width="45%"}
+
+I use computer science to advance mathematics, especially university mathematics education. I studied both subjects at the [University of Scranton](http://www.scranton.edu) and at [Indiana University](https://www.iub.edu), earning a Ph.D. in mathematical logic in 2004.
+
+I then joined the faculty of [Bentley University](https://www.bentley.edu) and have worked in logic, group theory visualization, computer graphics, data science, educational software, and social network analysis.
+
+This is my professional website, but I also have [a research profile on Bentley's website](https://faculty.bentley.edu/profile/ncarter).
+
+:::
+
+::::
