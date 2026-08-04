@@ -1,18 +1,10 @@
 ---
-title: Matrix Multiplication Visualization
-layout: page
-permalink: /matrix-mult/
-exclude_from_nav: true
+title: "Matrix Multiplication Visualization"
 ---
 
-Two random 4x4 matrices have been created below, and their
-product is shown.  Highlighted in red are a column from the
-first matrix and a row from the second matrix, whose product is
-the red entry in the final matrix.
+Two random $4\times 4$ matrices have been created below, and their product is shown.  Highlighted in red are a column from the first matrix and a row from the second matrix, whose product is the red entry in the final matrix.
 
-Drag the sliders to change which row and column are highlighted.
-The red equations at the bottom show how the row and column were
-multiplied to yield the final result.
+Drag the sliders to change which row and column are highlighted. The red equations at the bottom show how the row and column were multiplied to yield the final result.
 
 Created by Kevin Cox at Bentley University
 
@@ -173,4 +165,3 @@ def f(row=slider([1,2,3,4]),column=slider([1,2,3,4])):
 <script>
 sagecell.makeSagecell({"autoeval":true,"evalButtonText":"Start","hide":["editor","editorToggle","language","permalink","evalButton","bookmarks"],"inputLocation":"#sage-cell-0"});
 </script>
-
